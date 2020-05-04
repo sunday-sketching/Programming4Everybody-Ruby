@@ -1,0 +1,15 @@
+# Hash Crud
+# Key / Value like a dictionary in Python
+# Keys are unique
+movie_ratings = {
+	'godfather' => 10,
+	'parasite' => 10,
+	'matrix' => 9,
+	'cats' => 0
+}
+
+# Read
+# array[index]
+# hash[key] => value
+
+p movie_ratings['gotfather']
