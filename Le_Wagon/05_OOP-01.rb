@@ -117,11 +117,35 @@ puts warrior_one.dead?
 
 # p warrior_one == warrior_two
 
+class Apartment
+	def initialize # it means "create"
+		# what data we want to store when we create the object?
+		@name
+		@description
+		@address
+		@room
+		@pet_friendly
+	end
+end
 
+class User
+	def initialize
+		@email
+		@name
+		@password
+	end
+end
 
+class Citizen
+	def initialize
+		@name = name
+		@age = age
+	end
 
-
-
+	def can_vote?
+		@age >= 18
+	end
+end
 
 
 
