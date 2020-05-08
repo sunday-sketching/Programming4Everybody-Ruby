@@ -48,6 +48,7 @@ class Warrior
 		@name = name
 		@weapons = []
 		@dead = false
+		@health = 100
 	end
 
 	def dead?
@@ -55,13 +56,22 @@ class Warrior
 		@dead
 	end
 
-	def kill!
-		@dead = true
-	end
+	# def kill!
+	# 	@dead = true
+	# end
 
 	# reader = displaying stored values
 	def name
 		@name
+	end
+
+	def take_damage! # use the bang to indicate a value is being overwritten (bang operator)
+		# @health = @health - 20
+		@health -= 20
+	end
+
+	def health
+		@health
 	end
 
 	# writer
@@ -82,8 +92,16 @@ class Warrior
 end
 
 p warrior_one = Warrior.new('Jon Snow')
-warrior_one.add_weapon('sword')
-p warrior_one
+puts ''
+warrior_one.take_damage!
+warrior_one.take_damage!
+warrior_one.take_damage!
+warrior_one.take_damage!
+warrior_one.take_damage!
+puts warrior_one.health
+puts warrior_one.dead?
+# warrior_one.add_weapon('sword')
+# p warrior_one
 # p warrior_one.dead? # boolean with a question mark 
 # puts "Killing warrior!"
 # warrior_one.kill!
